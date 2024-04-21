@@ -1,26 +1,9 @@
 <template>
-  <v-card
-    :disabled="loading"
-    :loading="loading"
-    class="mx-auto my-12"
-    max-width="374"
-    elevation="10"
-  >
+  <v-card :disabled="loading" :loading="loading" class="mx-auto my-12" max-width="374" elevation="10">
     <template v-slot:loader="{ isActive }">
-      <v-progress-linear
-        :active="isActive"
-        color="deep-purple"
-        height="4"
-        indeterminate
-      ></v-progress-linear>
+      <v-progress-linear :active="isActive" color="deep-purple" height="4" indeterminate></v-progress-linear>
     </template>
-
-    <header>
-      <h2>{{ posts.id }} {{ posts.title }}</h2>
-      <p>{{ info.body }}</p>
-      <h1>Test2</h1>
-    </header>
-
+    <v-card-title>{{ posts.title }}</v-card-title>
     <v-img height="250" src="https://cdn.vuetifyjs.com/images/cards/cooking.png" cover></v-img>
 
     <v-card-item>
@@ -35,14 +18,7 @@
 
     <v-card-text>
       <v-row align="center" class="mx-0">
-        <v-rating
-          :model-value="4.8"
-          color="amber"
-          density="compact"
-          size="small"
-          half-increments
-          readonly
-        ></v-rating>
+        <v-rating :model-value="4.8" color="amber" density="compact" size="small" half-increments readonly></v-rating>
 
         <div class="text-grey ms-4">4.8 (413)</div>
       </v-row>
