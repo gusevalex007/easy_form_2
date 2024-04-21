@@ -1,5 +1,5 @@
 import './assets/main.css'
-
+import axios from 'axios'
 import { createApp } from 'vue'
 import App from './App.vue'
 
@@ -13,9 +13,9 @@ const vuetify = createVuetify({
   components,
   directives,
   theme: {
-    defaultTheme: 'dark',
+    defaultTheme: 'dark'
     //
-  },
+  }
 })
 
 createApp(App).use(vuetify).mount('#app')

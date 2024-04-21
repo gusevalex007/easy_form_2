@@ -1,7 +1,8 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
-import SimpleForm from './components/SimpleForm.vue';
+import SimpleForm from './components/SimpleForm.vue'
+import axios from 'axios'
 </script>
 
 <template>
@@ -17,6 +18,7 @@ q
     <SimpleForm />
   </main>
 </template>
+
 
 <style scoped>
 header {
