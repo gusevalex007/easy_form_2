@@ -5,8 +5,9 @@
     </template>
 
     <header>
-      <h2>{{ posts.id }} {{ posts.title }}</h2>
-      <p>{{ info.body }}</p>
+      <!-- <h2>{{ posts.id }} {{ posts.title }}</h2>
+      <p>{{ info.body }}</p> -->
+      <h1>Test</h1>
     </header>
 
     <v-img height="250" src="https://cdn.vuetifyjs.com/images/cards/cooking.png" cover></v-img>
