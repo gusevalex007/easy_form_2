@@ -13,9 +13,8 @@
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
   <script>
-    let main_page = document.querySelector('#main_page');
-    if (main_page) {
-      window.Telegram.WebApp.expand() //expand window after page loading
+    window.onload = function tg_expand() {
+      window.Telegram.WebApp.expand()
     }
   </script>
 </body>
