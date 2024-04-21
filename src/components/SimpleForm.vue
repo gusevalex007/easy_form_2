@@ -7,7 +7,7 @@
     <header>
       <!-- <h2>{{ posts.id }} {{ posts.title }}</h2>
       <p>{{ info.body }}</p> -->
-      <h1>Test</h1>
+      <h1>Test2</h1>
     </header>
 
     <v-img height="250" src="https://cdn.vuetifyjs.com/images/cards/cooking.png" cover></v-img>
@@ -90,22 +90,22 @@ import axios from 'axios'
 // }
 
 
-// export default {
-//   data() {
-//     return {
-//       posts: [],
-//       info: [],
-//       easy_var: String
-//     }
-//   },
-//   mounted() {
-//     axios
-//       .get('https://jsonplaceholder.typicode.com/posts/1')
-//       .then((response) => {
-//         this.posts = response.data
-//         this.info = response.data
-//       })
-//   }
-// }
+export default {
+  data() {
+    return {
+      posts: [],
+      info: [],
+      easy_var: String
+    }
+  },
+  mounted() {
+    axios
+      .get('https://jsonplaceholder.typicode.com/posts/1')
+      .then((response) => {
+        this.posts = response.data
+        this.info = response.data
+      })
+  }
+}
 
 </script>
