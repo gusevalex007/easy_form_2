@@ -5,8 +5,8 @@
     </template>
 
     <header>
-      <!-- <h2>{{ posts.id }} {{ posts.title }}</h2>
-      <p>{{ info.body }}</p> -->
+      <h2>{{ posts.id }} {{ posts.title }}</h2>
+      <p>{{ info.body }}</p>
       <h1>Test2</h1>
     </header>
 
