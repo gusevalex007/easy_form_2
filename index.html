@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-    <script>
-    window.Telegram.WebApp.expand()
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    let main_page = document.querySelector('#main_page');
+    if (main_page) {
+      window.Telegram.WebApp.expand() //expand window after page loading
+    }
+  </script>
+</body>
+
 </html>

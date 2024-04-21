@@ -1,7 +1,18 @@
 <template>
-  <v-card :disabled="loading" :loading="loading" class="mx-auto my-12" max-width="374" elevation="10">
+  <v-card
+    :disabled="loading"
+    :loading="loading"
+    class="mx-auto my-12"
+    max-width="374"
+    elevation="10"
+  >
     <template v-slot:loader="{ isActive }">
-      <v-progress-linear :active="isActive" color="deep-purple" height="4" indeterminate></v-progress-linear>
+      <v-progress-linear
+        :active="isActive"
+        color="deep-purple"
+        height="4"
+        indeterminate
+      ></v-progress-linear>
     </template>
 
     <header>
@@ -24,7 +35,14 @@
 
     <v-card-text>
       <v-row align="center" class="mx-0">
-        <v-rating :model-value="4.8" color="amber" density="compact" size="small" half-increments readonly></v-rating>
+        <v-rating
+          :model-value="4.8"
+          color="amber"
+          density="compact"
+          size="small"
+          half-increments
+          readonly
+        ></v-rating>
 
         <div class="text-grey ms-4">4.8 (413)</div>
       </v-row>
@@ -89,7 +107,6 @@ import axios from 'axios'
 //   }
 // }
 
-
 export default {
   data() {
     return {
@@ -99,13 +116,10 @@ export default {
     }
   },
   mounted() {
-    axios
-      .get('https://jsonplaceholder.typicode.com/posts/1')
-      .then((response) => {
-        this.posts = response.data
-        this.info = response.data
-      })
+    axios.get('https://jsonplaceholder.typicode.com/posts/1').then((response) => {
+      this.posts = response.data
+      this.info = response.data
+    })
   }
 }
-
 </script>
