@@ -118,7 +118,7 @@ function reserve() {
 
 const posts = ref([]);
 const info = ref([]);
-const products = ref([1, 2, 3])
+const products = ref([1])
 // const easyVar = ref('');
 
 axios.get('https://jsonplaceholder.typicode.com/posts/1').then((response) => {
