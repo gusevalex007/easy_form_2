@@ -1,56 +1,58 @@
 <template>
-  <v-card :disabled="loading" :loading="loading" class="mx-auto my-12" max-width="400" elevation="8">
-    <template v-slot:loader="{ isActive }">
-      <v-progress-linear :active="isActive" color="deep-purple" height="4" indeterminate></v-progress-linear>
-    </template>
-    <v-card-title>{{ posts.title }}</v-card-title>
-    <v-img height="250" src="https://cdn.vuetifyjs.com/images/cards/cooking.png" cover></v-img>
+  <div class="product-list">
+    <v-card v-for="prod in products" :disabled="loading" :loading="loading" class="mx-auto my-12" max-width="400"
+      elevation="8">
+      <template v-slot:loader="{ isActive }">
+        <v-progress-linear :active="isActive" color="deep-purple" height="4" indeterminate></v-progress-linear>
+      </template>
+      <v-card-title>{{ prod }} {{ posts.title }}</v-card-title>
+      <v-img height="250" src="https://cdn.vuetifyjs.com/images/cards/cooking.png" cover></v-img>
 
-    <v-card-item>
-      <v-card-title>Cafe Mint</v-card-title>
+      <v-card-item>
+        <v-card-title>Cafe Mint</v-card-title>
 
-      <v-card-subtitle>
-        <span class="me-1">Местная кондитерская</span>
+        <v-card-subtitle>
+          <span class="me-1">Местная кондитерская</span>
 
-        <v-icon color="error" icon="mdi-fire-circle" size="small"></v-icon>
-      </v-card-subtitle>
-    </v-card-item>
+          <v-icon color="error" icon="mdi-fire-circle" size="small"></v-icon>
+        </v-card-subtitle>
+      </v-card-item>
 
-    <v-card-text>
-      <v-row align="center" class="mx-0">
-        <v-rating :model-value="4.8" color="amber" density="compact" size="small" half-increments readonly></v-rating>
+      <v-card-text>
+        <v-row align="center" class="mx-0">
+          <v-rating :model-value="4.8" color="amber" density="compact" size="small" half-increments readonly></v-rating>
 
-        <div class="text-grey ms-4">4.8 (413)</div>
-      </v-row>
+          <div class="text-grey ms-4">4.8 (413)</div>
+        </v-row>
 
-      <div class="my-4 text-subtitle-1">$ • Торты, кофе</div>
+        <div class="my-4 text-subtitle-1">$ • Торты, кофе</div>
 
-      <div>Меренговый рулет на индючьем молоке с лепестками из чешуи бангладешской барабульки.</div>
-      <div class="my-4 text-subtitle-1">Вес 2.5 кг</div>
-      <div class="my-2 text-subtitle-1">Цена 3600 руб.</div>
-    </v-card-text>
+        <div>Меренговый рулет на индючьем молоке с лепестками из чешуи бангладешской барабульки.</div>
+        <div class="my-4 text-subtitle-1">Вес 2.5 кг</div>
+        <div class="my-2 text-subtitle-1">Цена 3600 руб.</div>
+      </v-card-text>
 
-    <v-divider class="mx-4 mb-1"></v-divider>
+      <v-divider class="mx-4 mb-1"></v-divider>
 
-    <v-card-title>Время доставки</v-card-title>
+      <v-card-title>Время доставки</v-card-title>
 
-    <div class="px-4 mb-2">
-      <v-chip-group v-model="selection" selected-class="bg-deep-purple-lighten-2">
-        <v-chip>5:30PM</v-chip>
+      <div class="px-4 mb-2">
+        <v-chip-group v-model="selection" selected-class="bg-deep-purple-lighten-2">
+          <v-chip>5:30PM</v-chip>
 
-        <v-chip>7:30PM</v-chip>
+          <v-chip>7:30PM</v-chip>
 
-        <v-chip>8:00PM</v-chip>
+          <v-chip>8:00PM</v-chip>
 
-        <v-chip>9:00PM</v-chip>
-      </v-chip-group>
-    </div>
+          <v-chip>9:00PM</v-chip>
+        </v-chip-group>
+      </div>
 
-    <v-card-actions>
-      <v-btn color="deep-purple-lighten-2" text="Заказать " block border @click="reserve"></v-btn>
-    </v-card-actions>
+      <v-card-actions>
+        <v-btn color="deep-purple-lighten-2" text="Заказать " block border @click="reserve"></v-btn>
+      </v-card-actions>
 
-    <!-- <v-dialog transition="dialog-top-transition" width="auto">
+      <!-- <v-dialog transition="dialog-top-transition" width="auto">
       <template v-slot:activator="{ props: activatorProps }">
         <v-btn v-bind="activatorProps" text="Transition from Top" block></v-btn>
       </template>
@@ -64,7 +66,8 @@
         </v-card>
       </template>
     </v-dialog> -->
-  </v-card>
+    </v-card>
+  </div>
 </template>
 
 <script setup>
@@ -115,6 +118,7 @@ function reserve() {
 
 const posts = ref([]);
 const info = ref([]);
+const products = ref([1, 2, 3])
 // const easyVar = ref('');
 
 axios.get('https://jsonplaceholder.typicode.com/posts/1').then((response) => {
@@ -124,3 +128,12 @@ axios.get('https://jsonplaceholder.typicode.com/posts/1').then((response) => {
 
 
 </script>
+
+<style scoped>
+.product-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px !important;
+  margin-bottom: 4px
+}
+</style>
