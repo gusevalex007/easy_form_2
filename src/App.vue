@@ -11,9 +11,9 @@ q
     </div>
   </header> -->
 
-  <main>
-    <SimpleForm />
-  </main>
+  <!-- <main> -->
+  <SimpleForm />
+  <!-- </main> -->
 </template>
 
 <style scoped>
