@@ -50,7 +50,7 @@
       <v-btn color="deep-purple-lighten-2" text="Заказать " block border @click="reserve"></v-btn>
     </v-card-actions>
 
-    <v-dialog transition="dialog-top-transition" width="auto">
+    <!-- <v-dialog transition="dialog-top-transition" width="auto">
       <template v-slot:activator="{ props: activatorProps }">
         <v-btn v-bind="activatorProps" text="Transition from Top" block></v-btn>
       </template>
@@ -63,12 +63,24 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
   </v-card>
 </template>
 
-<script>
+<script setup>
 import axios from 'axios'
+import { ref } from 'vue'
+
+const loading = false
+const selection = 1
+
+function reserve() {
+  document.write("hi")
+  this.loading = true
+  setTimeout(() => (this.loading = false), 2000)
+  document.write("hi2")
+}
+
 // export default {
 //   data: () => ({
 //     loading: false,
@@ -83,19 +95,32 @@ import axios from 'axios'
 //   }
 // }
 
-export default {
-  data() {
-    return {
-      posts: [],
-      info: [],
-      easy_var: String
-    }
-  },
-  mounted() {
-    axios.get('https://jsonplaceholder.typicode.com/posts/1').then((response) => {
-      this.posts = response.data
-      this.info = response.data
-    })
-  }
-}
+// export default {
+//   data() {
+//     return {
+//       posts: [],
+//       info: [],
+//       easy_var: String
+//     }
+//   },
+//   mounted() {
+//     axios.get('https://jsonplaceholder.typicode.com/posts/1').then((response) => {
+//       this.posts = response.data
+//       this.info = response.data
+//     })
+//   }
+// }
+
+
+
+const posts = ref([]);
+const info = ref([]);
+// const easyVar = ref('');
+
+axios.get('https://jsonplaceholder.typicode.com/posts/1').then((response) => {
+  posts.value = response.data;
+  info.value = response.data;
+});
+
+
 </script>

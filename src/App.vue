@@ -1,8 +1,5 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import SimpleForm from './components/SimpleForm.vue'
-import axios from 'axios'
 </script>
 
 <template>
