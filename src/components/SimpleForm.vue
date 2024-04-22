@@ -1,7 +1,7 @@
 <template>
   <div class="product-list">
     <v-card v-for="prod in products" :disabled="loading" :loading="loading" class="mx-auto my-12" max-width="374"
-      elevation="8">
+      elevation="10">
       <template v-slot:loader="{ isActive }">
         <v-progress-linear :active="isActive" color="deep-purple" height="4" indeterminate></v-progress-linear>
       </template>
@@ -133,7 +133,5 @@ axios.get('https://jsonplaceholder.typicode.com/posts/1').then((response) => {
 .product-list {
   display: flex;
   flex-direction: column;
-  margin-top: 4px !important;
-  margin-bottom: 4px
 }
 </style>
