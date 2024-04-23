@@ -27,7 +27,9 @@
 
         <div class="my-4 text-subtitle-1">$ • Торты, кофе</div>
 
-        <div>Меренговый рулет на индючьем молоке с лепестками из чешуи бангладешской барабульки.</div>
+        <div>
+          Меренговый рулет на индючьем молоке с лепестками из чешуи бангладешской барабульки.
+        </div>
         <div class="my-4 text-subtitle-1">Вес 2.5 кг</div>
         <div class="my-2 text-subtitle-1">Цена 3600 руб.</div>
       </v-card-text>
@@ -49,23 +51,8 @@
       </div>
 
       <v-card-actions>
-        <v-btn color="deep-purple-lighten-2" text="Заказать " block border @click="reserve"></v-btn>
+        <v-btn color="deep-purple-lighten-2" text="Заказать" block border @click="reserve"></v-btn>
       </v-card-actions>
-
-      <!-- <v-dialog transition="dialog-top-transition" width="auto">
-      <template v-slot:activator="{ props: activatorProps }">
-        <v-btn v-bind="activatorProps" text="Transition from Top" block></v-btn>
-      </template>
-      <template v-slot:default="{ isActive }">
-        <v-card>
-          <v-toolbar class="pa-4" title="Вы сделали свой первый заказ!"></v-toolbar>
-          <v-card-text class="text-h4 pa-12"> Спасибо! </v-card-text>
-          <v-card-actions class="justify-end">
-            <v-btn text="Закрыть" @click="isActive.value = false"></v-btn>
-          </v-card-actions>
-        </v-card>
-      </template>
-    </v-dialog> -->
     </v-card>
   </div>
 </template>
@@ -78,53 +65,26 @@ const loading = false
 const selection = 1
 
 function reserve() {
-  document.write("hi")
+  document.write('hi')
   this.loading = true
   setTimeout(() => (this.loading = false), 2000)
-  document.write("hi2")
+  document.write('hi2')
 }
 
-// export default {
-//   data: () => ({
-//     loading: false,
-//     selection: 1
-//   }),
-
-//   methods: {
-//     reserve() {
-//       this.loading = true
-//       setTimeout(() => (this.loading = false), 500)
-//     }
-//   }
-// }
-
-// export default {
-//   data() {
-//     return {
-//       posts: [],
-//       info: [],
-//       easy_var: String
-//     }
-//   },
-//   mounted() {
-//     axios.get('https://jsonplaceholder.typicode.com/posts/1').then((response) => {
-//       this.posts = response.data
-//       this.info = response.data
-//     })
-//   }
-// }
-
-
-
-const posts = ref([]);
-const info = ref([]);
+const posts = ref([])
+const info = ref([])
 const products = ref([1])
-// const easyVar = ref('');
 
 axios.get('https://jsonplaceholder.typicode.com/posts/1').then((response) => {
-  posts.value = response.data;
-  info.value = response.data;
-});
+  posts.value = response.data
+  info.value = response.data
+})
+
+const temp_var = fetch('https://fakestoreapi.com/products/1')
+  .then(res => res.json())
+  .then(json => console.log(json))
+
+console.log(temp_var.id)
 
 
 </script>

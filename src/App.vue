@@ -1,5 +1,7 @@
 <script setup>
 import SimpleForm from './components/SimpleForm.vue'
+
+
 </script>
 
 <template>
@@ -13,6 +15,13 @@ q
 
   <!-- <main> -->
   <SimpleForm />
+
+
+  <v-main>
+    <PhotoCapture />
+  </v-main>
+
+
   <!-- </main> -->
 </template>
 
