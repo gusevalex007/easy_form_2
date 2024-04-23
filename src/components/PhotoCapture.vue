@@ -1,5 +1,6 @@
 <template>
     <v-container>
+        <h1>hi</h1>
         <v-btn color="primary" @click="takePhoto">Take Photo</v-btn>
         <v-img :src="photo" aspect-ratio="1.6"></v-img>
     </v-container>
@@ -33,7 +34,7 @@ export default {
                 // Stop all video streams
                 stream.getVideoTracks().forEach(track => track.stop());
             } catch (error) {
-                console.error('Error capturing photo:', error);
+                document.write('Error capturing photo:', error);
             }
         },
     },
