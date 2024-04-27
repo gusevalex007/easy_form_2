@@ -2,6 +2,8 @@
     <v-container>
         <h1>hi</h1>
         <v-btn color="primary" @click="takePhoto">Take Photo</v-btn>
+        <input type="file" id="imageFile" capture="user" name="Сделать фотооо" accept="image/*" />
+        <label for="file">Сделать фото</label>
         <v-img :src="photo" aspect-ratio="1.6"></v-img>
     </v-container>
 </template>
@@ -16,7 +18,7 @@ export default {
     methods: {
         async takePhoto() {
             try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                const stream = await navigator.mediaDevices.getUserMedia();
                 const video = document.createElement('video');
                 video.srcObject = stream;
                 video.play();
