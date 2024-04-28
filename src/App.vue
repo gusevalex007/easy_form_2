@@ -6,9 +6,9 @@ import PhotoCapture from './components/PhotoCapture.vue'
 
 <template>
 
-  <div>
-    <SimpleForm />
-  </div>
+  <!-- <div> -->
+  <SimpleForm />
+  <!-- </div> -->
 
   <!-- <div>
     <PhotoCapture />
