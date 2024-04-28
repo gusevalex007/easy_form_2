@@ -94,4 +94,9 @@ console.log(temp_var.id)
   display: flex;
   flex-direction: column;
 }
+
+v-card {
+  position: relative;
+  min-width: 100%;
+}
 </style>
