@@ -95,6 +95,10 @@ console.log(temp_var.id)
   flex-direction: column;
 }
 
+.my-12 {
+  margin-top: 5px;
+}
+
 v-card {
   position: relative;
   min-width: 100%;
