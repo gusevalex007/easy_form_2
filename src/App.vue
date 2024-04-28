@@ -1,14 +1,14 @@
 <script setup>
 import SimpleForm from './components/SimpleForm.vue'
-import PhotoCapture from './components/PhotoCapture.vue'
+// import PhotoCapture from './components/PhotoCapture.vue'
 
 </script>
 
 <template>
 
-  <!-- <div> -->
-  <SimpleForm />
-  <!-- </div> -->
+  <div>
+    <SimpleForm />
+  </div>
 
   <!-- <div>
     <PhotoCapture />
@@ -19,6 +19,12 @@ import PhotoCapture from './components/PhotoCapture.vue'
 </template>
 
 <style scoped>
+.div {
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
 header {
   line-height: 1.5;
 }

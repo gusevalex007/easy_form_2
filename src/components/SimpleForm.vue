@@ -1,7 +1,7 @@
 <template>
   <div class="product-list">
-    <v-card v-for="prod in products" :disabled="loading" :loading="loading" class="mx-auto my-12" max-width="374"
-      elevation="10">
+    <v-card v-for="prod in products" :key="prod" :disabled="loading" :loading="loading" class="mx-auto my-12"
+      max-width="374" elevation="10">
       <template v-slot:loader="{ isActive }">
         <v-progress-linear :active="isActive" color="deep-purple" height="4" indeterminate></v-progress-linear>
       </template>
