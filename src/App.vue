@@ -1,18 +1,24 @@
 <script setup>
-import SimpleForm from './components/SimpleForm.vue'
+// import SimpleForm from './components/SimpleForm.vue'
+// import EventPage from './components/EventPage.vue';
+import ProductList from './components/ProductList.vue';
 // import PhotoCapture from './components/PhotoCapture.vue'
 
 </script>
 
 <template>
 
-  <div>
-    <SimpleForm />
-  </div>
+  <!-- <div>
+    <SimpleForm/>
+  </div> -->
 
   <!-- <div>
-    <PhotoCapture />
+    <EventPage/>
   </div> -->
+
+  <div>
+    <ProductList />
+  </div>
 
 
 
