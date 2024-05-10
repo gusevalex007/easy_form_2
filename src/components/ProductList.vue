@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-row>
-            <v-col cols="12" sm="6" md="6" v-for="product in products" :key="product.id">
+            <v-col cols="12" xs="6" sm="6" md="6" v-for="product in products" :key="product.id">
                 <v-card class="pa-4" @click="showDialog(product)">
                     <v-card-title class="headline">{{ product.name }}</v-card-title>
                     <v-img :src="product.image" height="200px"></v-img>
