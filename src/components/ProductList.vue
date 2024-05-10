@@ -4,9 +4,9 @@
             <v-col cols="12" sm="6" md="6" v-for="product in products" :key="product.id">
                 <v-card class="pa-4" @click="showDialog(product)">
                     <v-card-title class="headline">{{ product.name }}</v-card-title>
-                    <v-img :src="selectedProduct.image" height="200px"></v-img>
-                    <p>{{ selectedProduct.description }}</p>
-                    <div>Price: {{ selectedProduct.price }}</div>
+                    <v-img :src="product.image" height="200px"></v-img>
+                    <p>{{ product.description }}</p>
+                    <div>Price: {{ product.price }}</div>
                     <v-card-actions>
                         <v-spacer></v-spacer>
                         <v-btn color="green darken-1" @click="closeDialog">Buy</v-btn>
