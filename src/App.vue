@@ -555,7 +555,7 @@ h2 {
 .item-price {
   font-weight: 600;
   margin-right: 15px;
-  color: #8bc34a;
+  color: #96D4C1;
 }
 
 .remove-item {
@@ -601,7 +601,7 @@ h2 {
 }
 
 .category-tab.active {
-  background-color: #8bc34a;
+  background-color: #96D4C1;
   color: white;
 }
 
@@ -625,7 +625,7 @@ h2 {
 }
 
 .menu-item.selected {
-  border-left: 4px solid #8bc34a;
+  border-left: 4px solid #96D4C1;
   background-color: #f9f9f9;
 }
 
@@ -662,7 +662,7 @@ h2 {
 
 .price {
   font-weight: bold;
-  color: #8bc34a;
+  color: #96D4C1;
   font-size: 1.1rem;
 }
 
@@ -675,7 +675,7 @@ h2 {
 }
 
 .quantity-btn {
-  background: #8bc34a;
+  background: #96D4C1;
   color: white;
   border: none;
   width: 28px;
@@ -756,9 +756,9 @@ h2 {
 }
 
 .time-option.selected {
-  background-color: #8bc34a;
+  background-color: #96D4C1;
   color: white;
-  border-color: #8bc34a;
+  border-color: #96D4C1;
 }
 
 /* Способы оплаты */
@@ -796,7 +796,7 @@ h2 {
 }
 
 .radio-input:checked + .radio-custom {
-  border-color: #8bc34a;
+  border-color: #96D4C1;
 }
 
 .radio-input:checked + .radio-custom::after {
@@ -806,7 +806,7 @@ h2 {
   left: 3px;
   width: 12px;
   height: 12px;
-  background: #8bc34a;
+  background: #96D4C1;
   border-radius: 50%;
 }
 
@@ -821,7 +821,7 @@ h2 {
 }
 
 .payment-option.selected {
-  border-color: #8bc34a;
+  border-color: #96D4C1;
   background-color: #f1f8e9;
 }
 
@@ -845,7 +845,7 @@ h2 {
 }
 
 .input-field:focus {
-  border-color: #8bc34a;
+  border-color: #96D4C1;
   outline: none;
 }
 
@@ -860,7 +860,7 @@ h2 {
 
 /* Кнопки */
 .action-button {
-  background-color: #8bc34a;
+  background-color: #96D4C1;
   color: white;
   border: none;
   border-radius: 8px;
@@ -885,7 +885,7 @@ h2 {
 .secondary-button {
   background-color: white;
   color: #4a4a4a;
-  border: 1px solid #8bc34a;
+  border: 1px solid #96D4C1;
   border-radius: 8px;
   padding: 16px 24px;
   font-size: 1.1rem;
@@ -917,7 +917,7 @@ h2 {
 
 .confirmation-icon {
   font-size: 4rem;
-  color: #8bc34a;
+  color: #96D4C1;
   margin-bottom: 20px;
   line-height: 1;
 }
@@ -949,7 +949,7 @@ h2 {
 .total-price {
   font-weight: bold;
   font-size: 1.3rem;
-  color: #8bc34a;
+  color: #96D4C1;
   margin: 20px 0;
 }
 
@@ -1032,7 +1032,7 @@ h2 {
   .price,
   .item-price,
   .total-price {
-    color: #8bc34a;
+    color: #96D4C1;
   }
 }
 </style>
