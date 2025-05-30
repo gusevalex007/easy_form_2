@@ -466,7 +466,7 @@ body {
 
 /* Шапка в стиле MintTort */
 .header {
-  background-color: #8bc34a;
+  background-color: #96D4C1;
   color: white;
   padding: 20px;
   text-align: center;
