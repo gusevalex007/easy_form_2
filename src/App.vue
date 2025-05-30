@@ -2,7 +2,7 @@
   <div class="app-container">
     <!-- Шапка в стиле MintTort -->
     <header class="header">
-      <h1>🍰 Кондитерская "MintTort"</h1>
+      <h1>🍰 Кондитерская "Mint Tort"</h1>
       <p>Авторские торты на заказ</p>
     </header>
 
@@ -163,7 +163,7 @@
     </main>
 
     <footer class="footer">
-      <p>Кондитерская "MintTort" · Доставка · 8 (800) 123-45-67</p>
+      <p>Кондитерская "Mint Tort" · Доставка · 8 (800) 123-4567</p>
     </footer>
   </div>
 </template>
@@ -996,11 +996,11 @@ h2 {
   }
   
   .category-tab.active {
-    background-color: #689f38;
+    background-color: #96D4C1;
   }
   
   .time-option.selected {
-    background-color: #689f38 !important;
+    background-color: #96D4C1 !important;
     color: white !important;
   }
   
@@ -1017,7 +1017,7 @@ h2 {
   .secondary-button {
     background-color: #333;
     color: white;
-    border-color: #689f38;
+    border-color: #96D4C1;
   }
   
   .confirmation {
