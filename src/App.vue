@@ -959,7 +959,7 @@ h2 {
   padding: 15px;
   font-size: 0.9rem;
   color: white;
-  background-color: #689f38;
+  background-color: #96D4C1;
   margin-top: auto;
 }
 
