@@ -192,150 +192,150 @@ export default {
         { id: 7, name: 'Напитки' }
       ],
       menu: [
-        // Торты
-        {
-          id: 1,
-          categoryId: 1,
-          name: 'Торт "Мятная свежесть"',
-          description: 'Нежный бисквит с мятным кремом и ягодной прослойкой',
-          price: 2500,
-          image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        {
-          id: 2,
-          categoryId: 1,
-          name: 'Торт "Шоколадная мечта"',
-          description: 'Шоколадный бисквит с карамельным кремом и орехами',
-          price: 2800,
-          image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        {
-          id: 3,
-          categoryId: 1,
-          name: 'Торт "Красный бархат"',
-          description: 'Классический красный бархат с крем-чизом',
-          price: 2700,
-          image: 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        // Капкейки
-        {
-          id: 4,
-          categoryId: 2,
-          name: 'Капкейк "Ванильная нежность"',
-          description: 'Ванильный бисквит с крем-чизом',
-          price: 350,
-          image: 'https://images.unsplash.com/photo-1574085733277-851d9d856a3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        {
-          id: 5,
-          categoryId: 2,
-          name: 'Капкейк "Шоколадный рай"',
-          description: 'Шоколадный бисквит с ганашем',
-          price: 380,
-          image: 'https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        {
-          id: 6,
-          categoryId: 2,
-          name: 'Капкейк "Карамельное яблоко"',
-          description: 'Пряный бисквит с карамельным кремом',
-          price: 400,
-          image: 'https://images.unsplash.com/photo-1596223575327-99a5be4faf1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        // Пирожные
-        {
-          id: 7,
-          categoryId: 3,
-          name: 'Эклер "Классический"',
-          description: 'Заварное тесто с ванильным кремом',
-          price: 280,
-          image: 'https://images.unsplash.com/photo-1558317686-7f6d6a0a8b6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        {
-          id: 8,
-          categoryId: 3,
-          name: 'Чизкейк "Нью-Йорк"',
-          description: 'Классический чизкейк с ягодным топпингом',
-          price: 420,
-          image: 'https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        // Пироги
-        {
-          id: 9,
-          categoryId: 4,
-          name: 'Пирог "Яблочный"',
-          description: 'Слоеное тесто с яблочной начинкой',
-          price: 1200,
-          image: 'https://images.unsplash.com/photo-1562007908-17c67e878c0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        {
-          id: 10,
-          categoryId: 4,
-          name: 'Пирог "Вишневый"',
-          description: 'Песочное тесто с вишневой начинкой',
-          price: 1300,
-          image: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        // Макаруны
-        {
-          id: 11,
-          categoryId: 5,
-          name: 'Макарун "Ванильный"',
-          description: 'Нежное печенье с ванильным кремом',
-          price: 180,
-          image: 'https://images.unsplash.com/photo-151220107837-595f492a1a1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        {
-          id: 12,
-          categoryId: 5,
-          name: 'Макарун "Шоколадный"',
-          description: 'Нежное печенье с шоколадным ганашем',
-          price: 190,
-          image: 'https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        // Десерты
-        {
-          id: 13,
-          categoryId: 6,
-          name: 'Тирамису',
-          description: 'Классический итальянский десерт',
-          price: 450,
-          image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        {
-          id: 14,
-          categoryId: 6,
-          name: 'Крем-брюле',
-          description: 'Нежный десерт с карамельной корочкой',
-          price: 480,
-          image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        // Напитки
-        {
-          id: 15,
-          categoryId: 7,
-          name: 'Латте',
-          description: 'Кофе с молоком',
-          price: 250,
-          image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        {
-          id: 16,
-          categoryId: 7,
-          name: 'Какао',
-          description: 'Горячий шоколадный напиток',
-          price: 220,
-          image: 'https://images.unsplash.com/photo-1572383672419-ab35444a6934?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        },
-        {
-          id: 17,
-          categoryId: 7,
-          name: 'Мятный лимонад',
-          description: 'Освежающий напиток с мятой',
-          price: 200,
-          image: 'https://images.unsplash.com/photo-1551751299-1b51cab2694c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
-        }
-      ],
+  // Торты
+  {
+    id: 1,
+    categoryId: 1,
+    name: 'Торт "Мятная свежесть"',
+    description: 'Нежный бисквит с мятным кремом и ягодной прослойкой',
+    price: 2500,
+    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  {
+    id: 2,
+    categoryId: 1,
+    name: 'Торт "Шоколадная мечта"',
+    description: 'Шоколадный бисквит с карамельным кремом и орехами',
+    price: 2800,
+    image: 'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  {
+    id: 3,
+    categoryId: 1,
+    name: 'Торт "Красный бархат"',
+    description: 'Классический красный бархат с крем-чизом',
+    price: 2700,
+    image: 'https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  // Капкейки
+  {
+    id: 4,
+    categoryId: 2,
+    name: 'Капкейк "Ванильная нежность"',
+    description: 'Ванильный бисквит с крем-чизом',
+    price: 350,
+    image: 'https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  {
+    id: 5,
+    categoryId: 2,
+    name: 'Капкейк "Шоколадный рай"',
+    description: 'Шоколадный бисквит с ганашем',
+    price: 380,
+    image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  {
+    id: 6,
+    categoryId: 2,
+    name: 'Капкейк "Карамельное яблоко"',
+    description: 'Пряный бисквит с карамельным кремом',
+    price: 400,
+    image: 'https://images.unsplash.com/photo-1596223575327-99a5be4faf1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  // Пирожные
+  {
+    id: 7,
+    categoryId: 3,
+    name: 'Эклер "Классический"',
+    description: 'Заварное тесто с ванильным кремом',
+    price: 280,
+    image: 'https://images.unsplash.com/photo-1558317686-7f6d6a0a8b6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  {
+    id: 8,
+    categoryId: 3,
+    name: 'Чизкейк "Нью-Йорк"',
+    description: 'Классический чизкейк с ягодным топпингом',
+    price: 420,
+    image: 'https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  // Пироги
+  {
+    id: 9,
+    categoryId: 4,
+    name: 'Пирог "Яблочный"',
+    description: 'Слоеное тесто с яблочной начинкой',
+    price: 1200,
+    image: 'https://images.unsplash.com/photo-1562007908-17c67e878c0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  {
+    id: 10,
+    categoryId: 4,
+    name: 'Пирог "Вишневый"',
+    description: 'Песочное тесто с вишневой начинкой',
+    price: 1300,
+    image: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  // Макаруны
+  {
+    id: 11,
+    categoryId: 5,
+    name: 'Макарун "Ванильный"',
+    description: 'Нежное печенье с ванильным кремом',
+    price: 180,
+    image: 'https://images.unsplash.com/photo-151220107837-595f492a1a1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  {
+    id: 12,
+    categoryId: 5,
+    name: 'Макарун "Шоколадный"',
+    description: 'Нежное печенье с шоколадным ганашем',
+    price: 190,
+    image: 'https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  // Десерты
+  {
+    id: 13,
+    categoryId: 6,
+    name: 'Тирамису',
+    description: 'Классический итальянский десерт',
+    price: 450,
+    image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  {
+    id: 14,
+    categoryId: 6,
+    name: 'Крем-брюле',
+    description: 'Нежный десерт с карамельной корочкой',
+    price: 480,
+    image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  // Напитки
+  {
+    id: 15,
+    categoryId: 7,
+    name: 'Латте',
+    description: 'Кофе с молоком',
+    price: 250,
+    image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  {
+    id: 16,
+    categoryId: 7,
+    name: 'Какао',
+    description: 'Горячий шоколадный напиток',
+    price: 220,
+    image: 'https://images.unsplash.com/photo-1572383672419-ab35444a6934?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  },
+  {
+    id: 17,
+    categoryId: 7,
+    name: 'Мятный лимонад',
+    description: 'Освежающий напиток с мятой',
+    price: 200,
+    image: 'https://images.unsplash.com/photo-1551751299-1b51cab2694c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+  }
+],
       deliveryTimes: [
         { value: 'asap', label: 'Как можно скорее' },
         { value: '12:00', label: 'К 12:00' },
