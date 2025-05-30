@@ -1,13 +1,13 @@
 <template>
   <div class="app-container">
-    <!-- Шапка в стиле MintTort -->
+    <!-- Шапка в стиле TGIFridays -->
     <header class="header">
-      <h1>🍰 Кондитерская "MintTort"</h1>
-      <p>Авторские торты на заказ</p>
+      <h1>🍔 Кафе "Вкусно"</h1>
+      <p>Доставка еды</p>
     </header>
 
     <main class="main-content">
-      <!-- Шаг 1: Выбор десертов -->
+      <!-- Шаг 1: Выбор блюд -->
       <section v-if="currentStep === 1" class="step">
         <div class="order-summary" v-if="selectedItems.length > 0">
           <h3>Ваш заказ ({{ selectedItems.length }})</h3>
@@ -25,7 +25,7 @@
           </div>
         </div>
 
-        <h2>Выберите десерты</h2>
+        <h2>Выберите блюда</h2>
         <div class="menu-categories">
           <button 
             v-for="category in categories" 
@@ -163,7 +163,7 @@
     </main>
 
     <footer class="footer">
-      <p>Кондитерская "MintTort" · Доставка · 8 (800) 123-45-67</p>
+      <p>Кафе "Вкусно" · Доставка · 8 (800) 123-45-67</p>
     </footer>
   </div>
 </template>
@@ -175,7 +175,7 @@ export default {
     return {
       currentStep: 1,
       activeCategory: 1,
-      selectedItems: [],
+      selectedItems: [], // Массив объектов {id, quantity}
       selectedTime: null,
       selectedPayment: 'cash',
       cardNumber: '',
@@ -183,115 +183,115 @@ export default {
       cardCvc: '',
       orderNumber: Math.floor(Math.random() * 10000),
       categories: [
-        { id: 1, name: 'Торты' },
-        { id: 2, name: 'Капкейки' },
-        { id: 3, name: 'Пирожные' },
-        { id: 4, name: 'Пироги' },
-        { id: 5, name: 'Макаруны' },
+        { id: 1, name: 'Бургеры' },
+        { id: 2, name: 'Пицца' },
+        { id: 3, name: 'Паста' },
+        { id: 4, name: 'Салаты' },
+        { id: 5, name: 'Закуски' },
         { id: 6, name: 'Десерты' },
         { id: 7, name: 'Напитки' }
       ],
       menu: [
-        // Торты
+        // Бургеры
         {
           id: 1,
           categoryId: 1,
-          name: 'Торт "Мятная свежесть"',
-          description: 'Нежный бисквит с мятным кремом и ягодной прослойкой',
-          price: 2500,
-          image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Классический бургер',
+          description: 'Говяжья котлета, сыр, салат, соус',
+          price: 350,
+          image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
         {
           id: 2,
           categoryId: 1,
-          name: 'Торт "Шоколадная мечта"',
-          description: 'Шоколадный бисквит с карамельным кремом и орехами',
-          price: 2800,
-          image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Чизбургер',
+          description: 'Двойная котлета, сыр чеддер, бекон',
+          price: 420,
+          image: 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
         {
           id: 3,
           categoryId: 1,
-          name: 'Торт "Красный бархат"',
-          description: 'Классический красный бархат с крем-чизом',
-          price: 2700,
-          image: 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Чикенбургер',
+          description: 'Куриная котлета, салат, соус',
+          price: 380,
+          image: 'https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
-        // Капкейки
+        // Пицца
         {
           id: 4,
           categoryId: 2,
-          name: 'Капкейк "Ванильная нежность"',
-          description: 'Ванильный бисквит с крем-чизом',
-          price: 350,
-          image: 'https://images.unsplash.com/photo-1574085733277-851d9d856a3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Пицца Маргарита',
+          description: 'Томаты, сыр моцарелла, базилик',
+          price: 450,
+          image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
         {
           id: 5,
           categoryId: 2,
-          name: 'Капкейк "Шоколадный рай"',
-          description: 'Шоколадный бисквит с ганашем',
-          price: 380,
-          image: 'https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Пицца Пепперони',
+          description: 'Острая колбаса, сыр, томатный соус',
+          price: 490,
+          image: 'https://images.unsplash.com/photo-1620374645498-af6bd681a0bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
         {
           id: 6,
           categoryId: 2,
-          name: 'Капкейк "Карамельное яблоко"',
-          description: 'Пряный бисквит с карамельным кремом',
-          price: 400,
-          image: 'https://images.unsplash.com/photo-1596223575327-99a5be4faf1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Пицца 4 сыра',
+          description: 'Моцарелла, горгонзола, пармезан, чеддер',
+          price: 520,
+          image: 'https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
-        // Пирожные
+        // Паста
         {
           id: 7,
           categoryId: 3,
-          name: 'Эклер "Классический"',
-          description: 'Заварное тесто с ванильным кремом',
-          price: 280,
-          image: 'https://images.unsplash.com/photo-1558317686-7f6d6a0a8b6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Карбонара',
+          description: 'Спагетти, бекон, сливочный соус, яйцо',
+          price: 420,
+          image: 'https://images.unsplash.com/photo-1611270633750-8e1d069b5e7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
         {
           id: 8,
           categoryId: 3,
-          name: 'Чизкейк "Нью-Йорк"',
-          description: 'Классический чизкейк с ягодным топпингом',
-          price: 420,
-          image: 'https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Болоньезе',
+          description: 'Спагетти, мясной соус, пармезан',
+          price: 440,
+          image: 'https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
-        // Пироги
+        // Салаты
         {
           id: 9,
           categoryId: 4,
-          name: 'Пирог "Яблочный"',
-          description: 'Слоеное тесто с яблочной начинкой',
-          price: 1200,
-          image: 'https://images.unsplash.com/photo-1562007908-17c67e878c0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Салат Цезарь',
+          description: 'Курица, салат, сухарики, соус',
+          price: 280,
+          image: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
         {
           id: 10,
           categoryId: 4,
-          name: 'Пирог "Вишневый"',
-          description: 'Песочное тесто с вишневой начинкой',
-          price: 1300,
-          image: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Греческий салат',
+          description: 'Овощи, сыр фета, оливки',
+          price: 320,
+          image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
-        // Макаруны
+        // Закуски
         {
           id: 11,
           categoryId: 5,
-          name: 'Макарун "Ванильный"',
-          description: 'Нежное печенье с ванильным кремом',
+          name: 'Картофель фри',
+          description: 'Свежий картофель с соусом',
           price: 180,
-          image: 'https://images.unsplash.com/photo-151220107837-595f492a1a1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          image: 'https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
         {
           id: 12,
           categoryId: 5,
-          name: 'Макарун "Шоколадный"',
-          description: 'Нежное печенье с шоколадным ганашем',
-          price: 190,
-          image: 'https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Куриные крылья',
+          description: 'Хрустящие крылья в соусе',
+          price: 290,
+          image: 'https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
         // Десерты
         {
@@ -299,41 +299,41 @@ export default {
           categoryId: 6,
           name: 'Тирамису',
           description: 'Классический итальянский десерт',
-          price: 450,
+          price: 320,
           image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
         {
           id: 14,
           categoryId: 6,
-          name: 'Крем-брюле',
-          description: 'Нежный десерт с карамельной корочкой',
-          price: 480,
-          image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Чизкейк',
+          description: 'Нежный десерт с ягодным соусом',
+          price: 340,
+          image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
         // Напитки
         {
           id: 15,
           categoryId: 7,
-          name: 'Латте',
-          description: 'Кофе с молоком',
-          price: 250,
+          name: 'Кофе латте',
+          description: 'Эспрессо с молоком',
+          price: 180,
           image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
         {
           id: 16,
           categoryId: 7,
-          name: 'Какао',
-          description: 'Горячий шоколадный напиток',
-          price: 220,
-          image: 'https://images.unsplash.com/photo-1572383672419-ab35444a6934?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Лимонад',
+          description: 'Домашний лимонад с мятой',
+          price: 150,
+          image: 'https://images.unsplash.com/photo-1551751299-1b51cab2694c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         },
         {
           id: 17,
           categoryId: 7,
-          name: 'Мятный лимонад',
-          description: 'Освежающий напиток с мятой',
-          price: 200,
-          image: 'https://images.unsplash.com/photo-1551751299-1b51cab2694c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
+          name: 'Кола',
+          description: '0.33л',
+          price: 120,
+          image: 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80'
         }
       ],
       deliveryTimes: [
@@ -424,6 +424,7 @@ export default {
     },
     processOrder() {
       if (this.selectedPayment === 'online') {
+        // Здесь должна быть логика обработки платежа
         setTimeout(() => {
           this.currentStep++;
           this.orderNumber = Math.floor(Math.random() * 10000);
@@ -452,8 +453,8 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  background-color: #f8f8f8;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f5f5f5;
   color: #333;
 }
 
@@ -464,35 +465,33 @@ body {
   flex-direction: column;
 }
 
-/* Шапка в стиле MintTort */
+/* Шапка в стиле TGIFridays */
 .header {
-  background-color: #8bc34a;
+  background-color: #1a1a1a;
   color: white;
-  padding: 20px;
+  padding: 16px;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .header h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
 
 .header p {
-  margin: 8px 0 0;
-  font-size: 1rem;
+  margin: 4px 0 0;
   opacity: 0.9;
+  font-size: 0.9rem;
 }
 
 .main-content {
   flex: 1;
-  padding: 20px;
-  background-color: #f8f8f8;
+  padding: 16px;
+  background-color: #f5f5f5;
 }
 
 .step {
@@ -502,39 +501,37 @@ body {
 
 h2 {
   margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-  color: #4a4a4a;
-  font-weight: 600;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  color: #1a1a1a;
 }
 
 /* Корзина заказа */
 .order-summary {
   background: white;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  border-radius: 0;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .order-summary h3 {
   margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-  color: #4a4a4a;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
 }
 
 .order-items {
   max-height: 200px;
   overflow-y: auto;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .order-item {
   display: flex;
   align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .order-item:last-child {
@@ -543,38 +540,35 @@ h2 {
 
 .item-name {
   flex: 1;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .item-quantity {
-  margin: 0 10px;
+  margin: 0 8px;
   font-size: 0.9rem;
   color: #666;
 }
 
 .item-price {
-  font-weight: 600;
-  margin-right: 15px;
-  color: #8bc34a;
+  font-weight: 500;
+  margin-right: 12px;
 }
 
 .remove-item {
   background: none;
   border: none;
-  color: #f44336;
-  font-size: 1.3rem;
+  color: #e21a1a;
+  font-size: 1.2rem;
   cursor: pointer;
-  padding: 0 6px;
-  line-height: 1;
+  padding: 0 4px;
 }
 
 .order-total {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  padding-top: 12px;
-  border-top: 1px solid #f0f0f0;
-  font-size: 1.1rem;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
 }
 
 /* Категории меню */
@@ -582,64 +576,62 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   overflow-x: auto;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  gap: 8px;
 }
 
 .category-tab {
   background: white;
   border: none;
-  padding: 10px 18px;
-  border-radius: 25px;
+  padding: 8px 16px;
+  border-radius: 4px;
   font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  color: #666;
 }
 
 .category-tab.active {
-  background-color: #8bc34a;
+  background-color: #e21a1a;
   color: white;
 }
 
 /* Карточки меню */
 .menu-items {
   display: grid;
-  gap: 15px;
-  margin-bottom: 25px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .menu-item {
   display: flex;
   background: white;
-  border-radius: 12px;
-  padding: 15px;
+  border-radius: 0;
+  padding: 12px;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  border-left: 4px solid transparent;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: relative;
-  overflow: hidden;
 }
 
 .menu-item.selected {
-  border-left: 4px solid #8bc34a;
+  border-left-color: #e21a1a;
   background-color: #f9f9f9;
 }
 
 .menu-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .item-image {
-  width: 90px;
-  height: 90px;
-  border-radius: 8px;
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
   object-fit: cover;
-  margin-right: 15px;
+  margin-right: 12px;
 }
 
 .item-info {
@@ -647,137 +639,123 @@ h2 {
 }
 
 .item-info h3 {
-  margin: 0 0 6px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .item-info p {
-  margin: 0 0 6px;
-  font-size: 0.95rem;
+  margin: 0 0 4px;
+  font-size: 0.9rem;
   color: #666;
-  line-height: 1.4;
 }
 
 .price {
   font-weight: bold;
-  color: #8bc34a;
-  font-size: 1.1rem;
+  color: #e21a1a;
 }
 
 .item-controls {
   display: flex;
   align-items: center;
   position: absolute;
-  right: 15px;
-  bottom: 15px;
+  right: 12px;
+  bottom: 12px;
 }
 
 .quantity-btn {
-  background: #8bc34a;
+  background: #e21a1a;
   color: white;
   border: none;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1rem;
-  transition: background 0.2s;
-}
-
-.quantity-btn:hover {
-  background: #7cb342;
 }
 
 .item-quantity {
-  margin: 0 10px;
-  min-width: 22px;
+  margin: 0 8px;
+  min-width: 20px;
   text-align: center;
-  font-weight: 500;
 }
 
 /* Превью заказа */
 .order-preview {
   background: white;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+  border-radius: 0;
+  padding: 16px;
+  margin-bottom: 20px;
 }
 
 .order-preview h3 {
   margin-top: 0;
-  margin-bottom: 15px;
-  color: #4a4a4a;
+  margin-bottom: 12px;
 }
 
 .preview-item {
-  padding: 8px 0;
-  border-bottom: 1px solid #f0f0f0;
-  font-size: 1rem;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
 }
 
 .preview-total {
   font-weight: bold;
-  padding-top: 12px;
-  margin-top: 12px;
-  border-top: 1px solid #f0f0f0;
-  font-size: 1.1rem;
+  padding-top: 8px;
+  margin-top: 8px;
+  border-top: 1px solid #eee;
 }
 
 .preview-time {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #666;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 /* Варианты времени */
 .time-options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-bottom: 25px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .time-option {
   background: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  padding: 12px;
   text-align: center;
   cursor: pointer;
   transition: all 0.2s;
-  font-size: 0.95rem;
 }
 
 .time-option.selected {
-  background-color: #8bc34a;
+  background-color: #1a1a1a;
   color: white;
-  border-color: #8bc34a;
+  border-color: #1a1a1a;
 }
 
 /* Способы оплаты */
 .payment-options {
   display: grid;
-  gap: 12px;
-  margin-bottom: 25px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .payment-option {
   display: flex;
   align-items: center;
   background: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  padding: 12px;
   cursor: pointer;
   position: relative;
-  transition: all 0.2s;
+  border-left: 4px solid transparent;
 }
 
 .radio-input {
@@ -786,17 +764,16 @@ h2 {
 }
 
 .radio-custom {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border: 2px solid #ddd;
   border-radius: 50%;
-  margin-right: 15px;
+  margin-right: 12px;
   position: relative;
-  transition: border 0.2s;
 }
 
 .radio-input:checked + .radio-custom {
-  border-color: #8bc34a;
+  border-color: #e21a1a;
 }
 
 .radio-input:checked + .radio-custom::after {
@@ -804,49 +781,42 @@ h2 {
   position: absolute;
   top: 3px;
   left: 3px;
-  width: 12px;
-  height: 12px;
-  background: #8bc34a;
+  width: 10px;
+  height: 10px;
+  background: #e21a1a;
   border-radius: 50%;
 }
 
 .payment-label {
   flex: 1;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .payment-icon {
-  margin-left: 10px;
-  font-size: 1.3rem;
+  margin-left: 8px;
+  font-size: 1.2rem;
 }
 
 .payment-option.selected {
-  border-color: #8bc34a;
-  background-color: #f1f8e9;
+  border-left-color: #e21a1a;
+  background-color: #f9f9f9;
 }
 
 /* Данные карты */
 .card-details {
   background: white;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+  border-radius: 0;
+  padding: 16px;
+  margin-bottom: 20px;
 }
 
 .input-field {
   width: 100%;
-  padding: 14px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  margin-bottom: 12px;
   font-size: 1rem;
-  transition: border 0.2s;
-}
-
-.input-field:focus {
-  border-color: #8bc34a;
-  outline: none;
 }
 
 .input-field.small {
@@ -860,86 +830,81 @@ h2 {
 
 /* Кнопки */
 .action-button {
-  background-color: #8bc34a;
+  background-color: #e21a1a;
   color: white;
   border: none;
-  border-radius: 8px;
-  padding: 16px 24px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  border-radius: 0;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: bold;
   width: 100%;
   cursor: pointer;
   transition: background-color 0.2s;
+  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .action-button:disabled {
-  background-color: #cccccc;
+  background-color: #ccc;
   cursor: not-allowed;
 }
 
 .action-button:not(:disabled):hover {
-  background-color: #7cb342;
+  background-color: #c01010;
 }
 
 .secondary-button {
   background-color: white;
-  color: #4a4a4a;
-  border: 1px solid #8bc34a;
-  border-radius: 8px;
-  padding: 16px 24px;
-  font-size: 1.1rem;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  border-radius: 0;
+  padding: 14px 24px;
+  font-size: 1rem;
   width: 100%;
   cursor: pointer;
   transition: all 0.2s;
-  font-weight: 500;
 }
 
 .secondary-button:hover {
-  background-color: #f1f8e9;
+  background-color: #f0f0f0;
 }
 
 .button-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 12px;
 }
 
 /* Подтверждение заказа */
 .confirmation {
   text-align: center;
   background: white;
-  border-radius: 12px;
-  padding: 30px 20px;
+  border-radius: 0;
+  padding: 24px;
   margin-top: 20px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
 }
 
 .confirmation-icon {
-  font-size: 4rem;
-  color: #8bc34a;
-  margin-bottom: 20px;
-  line-height: 1;
+  font-size: 3rem;
+  color: #4CAF50;
+  margin-bottom: 16px;
 }
 
 .confirmation h2 {
-  color: #4a4a4a;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+  color: #1a1a1a;
+  font-size: 1.5rem;
 }
 
 .confirmation-items {
   text-align: left;
-  margin: 20px 0;
-  padding: 20px;
+  margin: 16px 0;
+  padding: 16px;
   background: #f9f9f9;
-  border-radius: 8px;
 }
 
 .confirmation-item {
-  padding: 10px 0;
+  padding: 8px 0;
   border-bottom: 1px solid #eee;
-  font-size: 1rem;
 }
 
 .confirmation-item:last-child {
@@ -948,22 +913,21 @@ h2 {
 
 .total-price {
   font-weight: bold;
-  font-size: 1.3rem;
-  color: #8bc34a;
-  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #e21a1a;
+  margin: 16px 0;
 }
 
 /* Подвал */
 .footer {
   text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
+  padding: 12px;
+  font-size: 0.8rem;
   color: white;
-  background-color: #689f38;
-  margin-top: auto;
+  background-color: #1a1a1a;
 }
 
-/* Адаптация для темной темы */
+/* Адаптация для темной темы Telegram */
 @media (prefers-color-scheme: dark) {
   .main-content {
     background-color: #121212 !important;
@@ -996,11 +960,11 @@ h2 {
   }
   
   .category-tab.active {
-    background-color: #689f38;
+    background-color: #e21a1a;
   }
   
   .time-option.selected {
-    background-color: #689f38 !important;
+    background-color: #e21a1a !important;
     color: white !important;
   }
   
@@ -1017,7 +981,7 @@ h2 {
   .secondary-button {
     background-color: #333;
     color: white;
-    border-color: #689f38;
+    border-color: #555;
   }
   
   .confirmation {
@@ -1027,12 +991,6 @@ h2 {
   .order-summary,
   .order-preview {
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  }
-  
-  .price,
-  .item-price,
-  .total-price {
-    color: #8bc34a;
   }
 }
 </style>
