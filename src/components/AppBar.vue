@@ -3,6 +3,7 @@
     <v-app-bar
       color="teal-darken-4"
       image="https://avatars.mds.yandex.net/i?id=0e3d7631a395cf71528d05fcd129f05c_sr-10780847-images-thumbs&n=13"
+      min-height="150px"
     >
       <template v-slot:image>
         <v-img
