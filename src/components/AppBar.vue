@@ -16,7 +16,7 @@
         <v-app-bar-nav-icon @click="drawer = !drawer" class="d-md-none"></v-app-bar-nav-icon>
       </template> -->
 
-      <v-app-bar-title class="align-end text-center mx-auto mt-auto">CARS.ON</v-app-bar-title>
+      <v-app-bar-title class="align-end text-center mx-auto mt-auto font-weight-bold">CARS.ON</v-app-bar-title>
 
       <!-- Десктопное меню -->
       <!-- <v-tabs v-if="!mobile" centered class="d-none d-md-flex">
