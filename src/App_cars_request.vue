@@ -6,7 +6,7 @@
         <v-container>
           <v-row>
             <v-col cols="12">
-              <v-card style="border-radius: 12px;" class="pa-4 mb-6">
+              <v-card style="border-radius: 12px;" class="mb-6">
                 <v-card-title style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #333;">
                   Создать новый запрос
                 </v-card-title>
