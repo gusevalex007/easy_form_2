@@ -3,7 +3,9 @@
     <v-app-bar
       color="teal-darken-4"
       image="https://avatars.mds.yandex.net/i?id=0e3d7631a395cf71528d05fcd129f05c_sr-10780847-images-thumbs&n=13"
-    >
+      height="88"
+      class="app-bar-safe"    
+      >
       <template v-slot:image>
         <v-img
           gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.8)"
@@ -14,7 +16,7 @@
         <v-app-bar-nav-icon @click="drawer = !drawer" class="d-md-none"></v-app-bar-nav-icon>
       </template> -->
 
-      <v-app-bar-title>CARS.ON</v-app-bar-title>
+      <v-app-bar-title class="align-end text-center mx-auto mt-auto">CARS.ON</v-app-bar-title>
 
       <!-- Десктопное меню -->
       <!-- <v-tabs v-if="!mobile" centered class="d-none d-md-flex">
@@ -59,5 +61,10 @@ watch(mobile, (newVal) => {
 <style>
 .v-bottom-navigation .v-btn {
   color: #9E9E9E !important;
+}
+
+.app-bar-safe {
+  padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+  padding-top: env(safe-area-inset-top); /* iOS 11.2+ */
 }
 </style>
