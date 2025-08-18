@@ -48,7 +48,7 @@
           <!-- Фильтр по цене -->
           <v-row>
             <v-col cols="12">
-              <v-card class="pa-4" style="border-radius: 12px;">
+              <v-card class="pa-2" style="border-radius: 12px;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
                   <span style="color: #666;">Диапазон цен:</span>
                   <span style="font-weight: 600;">
