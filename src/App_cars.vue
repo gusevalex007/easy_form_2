@@ -6,7 +6,7 @@
       <v-main style="background-color: #f8f8f8;">
         <v-container>
           <!-- Фильтры -->
-          <v-row class="mb-4">
+          <v-row>
             <v-col cols="12" sm="6" md="3">
               <v-select
                 v-model="brandFilter"
@@ -46,7 +46,7 @@
           </v-row>
 
           <!-- Фильтр по цене -->
-          <v-row class="mb-6">
+          <v-row>
             <v-col cols="12">
               <v-card class="pa-4" style="border-radius: 12px;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
