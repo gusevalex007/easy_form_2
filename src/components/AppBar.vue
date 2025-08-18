@@ -10,14 +10,14 @@
         ></v-img>
       </template>
 
-      <template v-slot:prepend>
+      <!-- <template v-slot:prepend>
         <v-app-bar-nav-icon @click="drawer = !drawer" class="d-md-none"></v-app-bar-nav-icon>
-      </template>
+      </template> -->
 
-      <v-app-bar-title>CARS.ON</v-app-bar-title>
+      <v-app-bar-title class="text-center mx-auto">CARS.ON</v-app-bar-title>
 
       <!-- Десктопное меню -->
-      <v-tabs v-if="!mobile" centered class="d-none d-md-flex">
+      <!-- <v-tabs v-if="!mobile" centered class="d-none d-md-flex">
         <v-tab to="/available-cars" class="text-none">Available Cars</v-tab>
         <v-tab to="/car-requests" class="text-none">My Requests</v-tab>
         <v-tab to="/new-request" class="text-none">New Request</v-tab>
@@ -25,7 +25,7 @@
 
       <v-btn icon class="d-md-none">
         <v-icon>mdi-magnify</v-icon>
-      </v-btn>
+      </v-btn> -->
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" temporary class="d-md-none">
